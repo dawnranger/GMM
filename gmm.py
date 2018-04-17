@@ -96,7 +96,7 @@ def gaussian_prob(X, N, K, pMiu, pSigma, threshold, D):
 
 
 def test():
-    X = np.loadtxt('testSet.txt')
+    X = np.loadtxt('data/testSet.txt')
     ppx = gmm(X, 4)
     index = np.argmax(ppx, axis=1)
     plt.figure()

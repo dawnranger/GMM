@@ -67,7 +67,7 @@ def kmeans(X, k, observer=None, threshold=1e-5, maxiters=300):
 
 
 if __name__ == '__main__':
-    with open('data.pkl') as inf:
+    with open('data/data.pkl') as inf:
         X = pickle.load(inf)
 
     def observer(iters, labels, centers):
@@ -80,6 +80,6 @@ if __name__ == '__main__':
         # draw centers
         plt.scatter(centers[:, 0], centers[:, 1], s=200, c=colors)
 
-        plt.savefig('kmeans/iters_%02d.png' % iters, format='png')
+        plt.savefig('data/iters_%02d.png' % iters, format='png')
 
     kmeans(X, 3, observer=observer)
